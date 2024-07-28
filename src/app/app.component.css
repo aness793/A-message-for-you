@@ -1,7 +1,7 @@
 .background{
     position: absolute;
-    width: clamp(40svw,100svw,120svw);
-    height: clamp(40svh,100svh,120svh);
+    width: clamp(100svw,100svw,120svw);
+    height: clamp(100svh,100svh,120svh);
     z-index: -1000;
     object-fit: cover;
 
@@ -54,8 +54,8 @@
 }
 .message {
     background-color:bisque;
-    width: 20rem;
-    height: 10rem;
+    width: clamp(10rem,20rem,30rem);
+    height: clamp(7rem,10rem,15rem);
     position: absolute;
     margin-bottom: 6rem;
     display:grid;
@@ -100,4 +100,59 @@
 }
 .blurry {
     filter: blur(8px);
+}
+@media screen and (max-width:670px) {
+    .background {
+        width:100svw;
+        height:100svh;
+    }
+    .imgs {
+        width: 4rem;
+        height: 2rem;
+    }
+    .bgs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100svw;
+        height: 10rem;
+        flex-direction: row;
+    }
+    .bgs span {
+        display:flex;
+        flex-wrap:wrap;
+        gap:5px;
+    }
+
+}
+@media screen and (max-width:340px) {
+    .content span i {
+        font-size: 5rem;
+        color: white;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+    .content h1 {
+        cursor: pointer;
+        font-family:  "Pixelify Sans", sans-serif;
+        font-size:1.2rem;
+    }   
+    .message {
+        max-width: 10rem;
+        min-width: 6rem;
+        max-height: 10rem;
+        min-height: 7rem;
+    }
+    .message2 {
+        grid-template-rows: 1fr .8rem;
+
+    }
+    .message2 p {
+        font-size: .6rem;
+    }
+    .message2 h3 {
+        font-size: .6rem;
+    }
 }
