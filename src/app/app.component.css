@@ -1,0 +1,103 @@
+.background{
+    position: absolute;
+    width: clamp(40svw,100svw,120svw);
+    height: clamp(40svh,100svh,120svh);
+    z-index: -1000;
+    object-fit: cover;
+
+}
+.imgs {
+    width: 5rem;
+    height: 3rem;
+}
+.bgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100svw;
+    height: 5rem;
+    gap: 50px;
+    flex-direction: row;
+}
+.bgs span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.container {
+    display: grid;
+    width: clamp(40svw,100svw,120svw);
+    height: clamp(40svh,100svh,120svh);
+    grid-template-rows: 1fr 1fr;
+}
+.content {
+    grid-row: 2/3;
+    justify-self: center;
+}
+.content span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content span i {
+    font-size: 7rem;
+    color: white;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.content h1 {
+    cursor: pointer;
+    font-family:  "Pixelify Sans", sans-serif;
+}
+.message {
+    background-color:bisque;
+    width: 20rem;
+    height: 10rem;
+    position: absolute;
+    margin-bottom: 6rem;
+    display:grid;
+    grid-template-columns: 90% 10%;
+    z-index: 1000;
+}
+.message p {
+    justify-content: end;
+   bottom:0;
+   z-index: 1000;
+
+}
+.message2 {
+    display:grid;
+    grid-template-rows: 1fr 2rem;
+}
+.message2 p{
+    font-family: 'Inter';
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-size:1.2rem;
+    
+}
+.message2 h3 {
+    grid-row: 2/3;
+    bottom: 0;
+    margin: 0 auto;
+    font-size:.8rem;
+    font-family: "Pixelify Sans", sans-serif;
+}
+.content button {
+    background-color:transparent;
+    width: 1rem;
+    aspect-ratio: 1;
+    top:.5rem;
+    border:none;
+    left:.5rem;
+    cursor:pointer;
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+.blurry {
+    filter: blur(8px);
+}
