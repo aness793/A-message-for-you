@@ -12,7 +12,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'message-for-you';
   array = ['bg1.jpg','bg2.jpg','bg3.jpg','bg4.jpg','bg5.jpg','bg6.jpg']
-appear:boolean=true
+appear:boolean=false
 k:number=0
 bg:number=3
   message (){
