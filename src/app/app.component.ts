@@ -12,7 +12,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'message-for-you';
   array = ['bg1.jpg','bg2.jpg','bg3.jpg','bg4.jpg','bg5.jpg','bg6.jpg']
-appear:boolean=false
+appear:boolean=true
 k:number=0
 bg:number=3
   message (){
@@ -35,7 +35,7 @@ messages = [
   'what if you are almost there?',
   'The regret of failing or the regret of never trying?',
   'i love you',
-  `don't stop doing being yourself to impress people that will never be impressed `,
+  `don't stop being yourself to impress people....they will never be impressed and you will never live your life`,
   'enjoy doing things like it is your last time doing them',
   `end the conversation with saying what you won't regret if it was your last time talking to that person`,
   'forgive others, we all make mistakes ♡',

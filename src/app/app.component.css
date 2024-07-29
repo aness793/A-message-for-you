@@ -54,12 +54,12 @@
 }
 .message {
     background-color:bisque;
-    width: clamp(10rem,20rem,30rem);
-    height: clamp(7rem,10rem,15rem);
+    width: clamp(10rem,30rem,40rem);
+    height: clamp(7rem,20rem,25rem);
     position: absolute;
     margin-bottom: 6rem;
     display:grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns:1fr 1rem;
     z-index: 1000;
 }
 .message p {
@@ -70,13 +70,19 @@
 }
 .message2 {
     display:grid;
+    grid-column: 1/2;
     grid-template-rows: 1fr 2rem;
 }
+.message button {
+    grid-column:2/3;
+    font-size:1.4rem;
+}
 .message2 p{
-    font-family: 'Inter';
-    margin: 0 auto;
+    font-family: 'Patrick Hand';
+    font-weight: 500;
+    margin: 0 1rem;
     margin-top: 1rem;
-    font-size:1.2rem;
+    font-size:1.4rem;
     
 }
 .message2 h3 {
@@ -94,7 +100,7 @@
     border:none;
     left:.5rem;
     cursor:pointer;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 700;
 
 }
@@ -151,6 +157,7 @@
     }
     .message2 p {
         font-size: .6rem;
+
     }
     .message2 h3 {
         font-size: .4rem;
