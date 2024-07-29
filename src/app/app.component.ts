@@ -30,11 +30,17 @@ random(min:number,max:number){
   return Math.floor(this.k)
 }
 messages = [
-  `never give up`,
+  `you will not fail until you stop Trying`,
   'keep fighting, you are strong ♡',
-  'you are almost there',
-  'you are strong',
+  'what if you are almost there?',
+  'The regret of failing or the regret of never trying?',
   'i love you',
+  `don't stop doing being yourself to impress people that will never be impressed `,
+  'enjoy doing things like it is your last time doing them',
+  `end the conversation with saying what you won't regret if it was your last time talking to that person`,
+  'forgive others, we all make mistakes ♡',
+  'do the things you would regret not doing if you were about to die right now',
+  `don't stop being yourself because of people that are afraid of being themselves`,
 ]
 
 }
