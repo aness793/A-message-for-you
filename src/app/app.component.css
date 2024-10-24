@@ -1,190 +1,145 @@
-.background{
+.container > img {
     position: absolute;
-    width: clamp(100svw,100svw,120svw);
-    height: clamp(100svh,100svh,120svh);
-    z-index: -1000;
-    object-fit: cover;
-
-}
-.imgs {
-    width: 5rem;
-    height: 3rem;
+    width: clamp(200px , 100svw , 110svw);
+    height: clamp(530px , 100svh,110svh);
+    z-index: -5;
+    box-sizing: content-box;
 }
 .bgs {
+    width: clamp(200px , 100svw , 110svw);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
-    width: 100svw;
-    height: 5rem;
-    gap: 50px;
-    flex-direction: row;
-    margin-inline: .2rem;
+    padding: .1rem .2rem;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+    padding-inline: 8px;
 }
-.bgs span {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.bgs img {
+    width: clamp(1rem,5rem,5rem);
+    height: clamp(2rem,3rem,5rem);
+    margin-right: .5rem;
+    cursor: pointer;
 }
-.container {
-    display: grid;
-    width: clamp(40svw,100svw,120svw);
-    height: clamp(40svh,100svh,120svh);
-    grid-template-rows: 1fr 1fr;
+.bgs p {
+    font-size: clamp(.8rem,1.2rem,1.4rem);
+    margin-right: 1rem;
+    font-size: 'Pixelify Sans';
 }
 .content {
-    grid-row: 2/3;
-    justify-self: center;
+    width: clamp(200px , 100svw , 110svw);
+    height: clamp(10rem , 30rem , 40rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-inline: 8px;
 }
 .content span {
+    height: clamp(10rem,20rem,30rem);
+    width: clamp(8rem,25rem,35rem) ;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 .content span i {
-    font-size: 7rem;
-    color: white;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
+    font-size: 4rem;
 }
-.content h1 {
-    cursor: pointer;
-    font-family:  "Pixelify Sans", sans-serif;
+.content span h1 {
+    font-size: 2.4rem;
+    text-align: center;
 }
 .message {
-    background-color:bisque;
-    width: clamp(10rem,30rem,40rem);
-    height: clamp(7rem,20rem,25rem);
     position: absolute;
-    margin-bottom: 6rem;
-    display:grid;
-    grid-template-columns:1fr 1rem;
-    z-index: 1000;
+    background-color:bisque;
+    height: clamp(10rem,20rem,35rem);
+    width: clamp(16rem,30rem,50rem) ;
+    display: grid;
+    grid-template-rows: 2rem 1fr 1rem;
+    margin-inline: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
 }
 .message p {
-    justify-content: end;
-   bottom:0;
-   z-index: 1000;
-
+    align-self: center;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Patrick Hand';
+    padding-inline: 4px;
 }
-.message2 {
-    display:grid;
-    grid-column: 1/2;
-    grid-template-rows: 1fr 2rem;
+.cancel {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: .5rem;
 }
 .message button {
-    grid-column:2/3;
-    font-size:1.4rem;
+    padding: 2px;
+    padding-right: 4px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
 }
-.message2 p{
-    font-family: 'Patrick Hand';
-    font-weight: 500;
-    margin: 0 1rem;
-    margin-top: 1rem;
-    font-size:1.4rem;
-    
-}
-.message2 h3 {
-    grid-row: 2/3;
-    bottom: 0;
-    margin: 0 auto;
-    font-size:.8rem;
-    font-family: "Pixelify Sans", sans-serif;
-}
-.content button {
-    background-color:transparent;
-    width: 1rem;
-    aspect-ratio: 1;
-    top:.5rem;
-    border:none;
-    left:.5rem;
-    cursor:pointer;
-    font-size: 1.4rem;
-    font-weight: 700;
-
+.message h3 {
+    text-align: center;
+    padding-bottom: 4px;
+    font-size: .8rem;
 }
 .blurry {
     filter: blur(8px);
 }
-@media screen and (max-width:670px) {
-    .background {
-        width:100svw;
-        height:100svh;
-    }
-    .imgs {
-        width: 4rem;
-        height: 2rem;
-    }
-    .bgs {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100svw;
-        height: 10rem;
-        flex-direction: row;
-    }
-    .bgs span {
-        display:flex;
-        flex-wrap:wrap;
-        gap:5px;
-    }
-
-}
-@media screen and (max-width:340px) {
-    .content span i {
-        font-size: 5rem;
-        color: white;
-        margin: 0;
-        padding: 0;
-        cursor: pointer;
-    }
-    .content h1 {
-        cursor: pointer;
-        font-family:  "Pixelify Sans", sans-serif;
-        font-size:1.2rem;
-    }   
+@media screen and (max-width:500px) {
     .message {
-        max-width: 10rem;
-        min-width: 6rem;
-        max-height: 10rem;
-        min-height: 7rem;
+        height: clamp(5rem,10rem,35rem);
+        width: clamp(5rem,25rem,50rem) ;
+        grid-template-rows: 1rem 1fr 1rem;
+        margin-inline: 8px;
+        margin-bottom: 8px;
+    }   
+    .message p {
+        text-wrap: wrap;
+        font-size: 1rem;
     }
-    .message2 {
-        grid-template-rows: 1fr .8rem;
-
-    }
-    .message2 p {
+    .message h3 {
         font-size: .6rem;
-
     }
-    .message2 h3 {
-        font-size: .4rem;
+    .message button{
+        font-size: .8rem;
+    }
+    .bgs img {
+        width: 2.5rem ;
+        height: 2rem ;
     }
 }
-@media screen and (max-width:200px) {
-    .message button {
-        font-size: .8rem;
-        padding-right: 2px;
+@media screen and (max-width:390px) {
+    .message {
+    max-width: 15rem;
+    }
+
+}
+@media screen and (max-width:250px) {
+    .message {
+    width: 7rem;
+    }
+    .message p {
+    font-size: .8rem;
+}
+.message h3 {
+font-size: .4rem;}
+
+}
+@media screen and (max-width:198px) {
+    .container > img {
+        min-height: 200svh ;
     }
     .content h1 {
-        cursor: pointer;
-        font-family:  "Pixelify Sans", sans-serif;
-        font-size:1rem;
-        text-align: center;
-    }   
-    .bgs img {
-        width: 3rem;
-        height: 2rem;
+        font-size: 1rem;
+    }
+    .message p  {
+        font-size: .6rem;
     }
     .message {
-        margin-inline: 1rem;
-        max-width: 180px;
-        grid-template-columns:1fr 20px;
-    }
-    .message2 h3 {
-        font-size: .4rem;
+        margin-inline:2px;
     }
 }

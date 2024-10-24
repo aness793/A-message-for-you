@@ -6,4 +6,6 @@
     outline-offset: 0;
     overflow-x: clip;
     overflow-y: clip;
+    box-sizing: border-box;
+    font-size: 'Pixelify Sans';
 }

@@ -1,20 +1,16 @@
 <div class="container" >
   <img [src]="array[bg]" alt="" [class.blurry]="appear" class="background">
   <div class="bgs" (click)="appear=false">
-    <span>
       <p>Choose a backgrounds:</p> <img *ngFor="let ele of array" [src]="ele" class="imgs" (click)="bg =array.indexOf(ele)" alt="">
-    </span>
   </div>
   <div class="content" >
    <span (click)="message()">  
         <i class='bx bxs-envelope bx-flip-horizontal'   ></i>
       <h1 *ngIf="!appear" >click for a message</h1>
       <div class="message" *ngIf="appear">
-        <div class="message2" style="position:relative">
+        <div class="cancel" ><button (click)="disappear()">X</button></div>
           <p  >{{messages[k]}} </p>
           <h3>made by Aness Rahmani</h3>
-        </div>
-        <button style="right: 0; top:0; " class="cancel" (click)="disappear()">X</button>
       </div>
 
     </span>
