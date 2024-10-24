@@ -19,6 +19,7 @@
     height: 5rem;
     gap: 50px;
     flex-direction: row;
+    margin-inline: .2rem;
 }
 .bgs span {
     display: flex;
@@ -158,6 +159,30 @@
     .message2 p {
         font-size: .6rem;
 
+    }
+    .message2 h3 {
+        font-size: .4rem;
+    }
+}
+@media screen and (max-width:200px) {
+    .message button {
+        font-size: .8rem;
+        padding-right: 2px;
+    }
+    .content h1 {
+        cursor: pointer;
+        font-family:  "Pixelify Sans", sans-serif;
+        font-size:1rem;
+        text-align: center;
+    }   
+    .bgs img {
+        width: 3rem;
+        height: 2rem;
+    }
+    .message {
+        margin-inline: 1rem;
+        max-width: 180px;
+        grid-template-columns:1fr 20px;
     }
     .message2 h3 {
         font-size: .4rem;

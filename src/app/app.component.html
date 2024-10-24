@@ -8,13 +8,13 @@
   <div class="content" >
    <span (click)="message()">  
         <i class='bx bxs-envelope bx-flip-horizontal'   ></i>
-      <h1 >click for a message</h1>
+      <h1 *ngIf="!appear" >click for a message</h1>
       <div class="message" *ngIf="appear">
         <div class="message2" style="position:relative">
           <p  >{{messages[k]}} </p>
           <h3>made by Aness Rahmani</h3>
         </div>
-        <button style="right: 0; top:0; " (click)="disappear()">X</button>
+        <button style="right: 0; top:0; " class="cancel" (click)="disappear()">X</button>
       </div>
 
     </span>
