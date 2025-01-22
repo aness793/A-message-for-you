@@ -4,11 +4,11 @@
       <p>Choose a backgrounds:</p> <img *ngFor="let ele of array" [src]="ele" class="imgs" (click)="bg =array.indexOf(ele)" alt="">
   </div>
   <div class="content" >
-   <span (click)="message()">  
-        <i class='bx bxs-envelope bx-flip-horizontal'   ></i>
+   <span (click)="message() ">  
+        <i class='bx bxs-envelope bx-flip-horizontal' style="cursor:pointer;"  ></i>
       <h1 *ngIf="!appear" >click for a message</h1>
       <div class="message" *ngIf="appear">
-        <div class="cancel" ><button (click)="disappear()">X</button></div>
+        <div class="cancel" ><button (click)="disappear()" style="cursor:pointer;">X</button></div>
           <p  >{{messages[k]}} </p>
           <h3>made by Aness Rahmani</h3>
       </div>
